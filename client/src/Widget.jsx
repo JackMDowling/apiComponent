@@ -3,8 +3,8 @@ import { useState } from "react";
 import axios from "axios";
 
 function JwtWidget(){
-    const [accountID, setAccountID] = useState('')
-    const [secretKey, setSecretKey] = useState('')
+    const [accountID, setAccountID] = useState('');
+    const [secretKey, setSecretKey] = useState('');
 
     const generateToken = () => {
         if (secretKey.length === 0) {
@@ -16,7 +16,12 @@ function JwtWidget(){
         else {
             const iat = new Date().getTime() / 1000;
 axios.get(`/jwt?secret=${secretKey}&iat=${iat}&account=${accountID}`).then((res) =>{
-    console.log(res)
+    console.log(res.data)
+    navigator.clipboard.writeText(res.data).then(() => {
+        console.log('something happened')
+    }).catch(() => {
+        console.log('copying failed')
+    })
 }).catch((err) => {
     console.log(err)
 })

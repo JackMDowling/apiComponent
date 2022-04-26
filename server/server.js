@@ -15,8 +15,8 @@ app.get("/jwt", (req, res) => {
     iat: iat,
   };
   const token = jwt.sign(payload, secret);
-  console.log(token);
-  res.send({ text: "hello" });
+  console.log(payload, secret);
+  res.send(token);
 });
 
 app.listen(port, () => {
