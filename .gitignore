@@ -1,5 +1,6 @@
-node_modules
-build
-npm-debug.log
-.env
+
+**/.DS_Store
+config.js
 .DS_Store
+** bundle.js
+node_modules
