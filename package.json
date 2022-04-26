@@ -1,0 +1,24 @@
+{
+  "name": "apicomponent",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JackMDowling/apiComponent.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JackMDowling/apiComponent/issues"
+  },
+  "homepage": "https://github.com/JackMDowling/apiComponent#readme",
+  "dependencies": {
+    "jsonwebtoken": "^8.5.1",
+    "react": "^18.0.0",
+    "webpack": "^5.72.0"
+  }
+}
