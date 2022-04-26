@@ -1,5 +1,5 @@
-import React from "react"
-import { useState } from "react"
+import React from 'react';
+import { useState } from "react";
 import axios from "axios";
 
 function JwtWidget(){
@@ -11,7 +11,7 @@ function JwtWidget(){
         alert('Please Enter Your Key')
         }
         else {
-axios.get(`${url}/jwt?secret=${textBox}`).then((res) =>{
+axios.get(`/jwt?secret=${textBox}`).then((res) =>{
     console.log(res)
 }).catch((err) => {
     console.log(err)
