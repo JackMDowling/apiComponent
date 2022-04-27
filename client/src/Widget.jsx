@@ -11,14 +11,16 @@ function JwtWidget() {
   const [modalClass, setModalClass] = useState("messageModal");
 
   const generateToken = () => {
-    if (secretKey.length === 0) {
-      setHiddenMessage("Please Enter Your Secret Token");
-      toggleAnimation();
-    }
     if (accountID.length === 0) {
       setHiddenMessage("Please Enter Your Account ID");
       toggleAnimation();
-    } else {
+      return;
+    }
+    if (secretKey.length === 0) {
+      setHiddenMessage("Please Enter Your Secret Token");
+      toggleAnimation();
+      return;
+    } else if (accountID.length && secretKey.length) {
       setHiddenMessage("Copied to Clipboard");
       toggleAnimation();
       const iat = new Date().getTime() / 1000;
