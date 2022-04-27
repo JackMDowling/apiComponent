@@ -23,6 +23,10 @@ module.exports = {
         test: /\.(png|jpe?g|gig)$/i,
         loader: "file-loader",
       },
+      {
+        test: /\.css$/i,
+        use: ["css-loader"],
+      },
     ],
   },
 };

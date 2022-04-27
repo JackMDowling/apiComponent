@@ -5,7 +5,6 @@ const App = () => {
 
     return (
     <>
-    <p>This is the FE</p>
     <JwtWidget />
     </>
 
