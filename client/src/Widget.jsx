@@ -24,6 +24,7 @@ function JwtWidget() {
       setHiddenMessage("Copied to Clipboard");
       toggleAnimation();
       const iat = new Date().getTime() / 1000;
+      // When implementing this into our codebase, change the URL of the get request to our own backend
       axios
         .get(`/jwt?secret=${secretKey}&iat=${iat}&account=${accountID}`)
         .then((res) => {
